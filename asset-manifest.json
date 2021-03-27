@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/greedwald/static/js/main.7b05810b.chunk.js",
-    "main.js.map": "/greedwald/static/js/main.7b05810b.chunk.js.map",
+    "main.js": "/greedwald/static/js/main.86986f0e.chunk.js",
+    "main.js.map": "/greedwald/static/js/main.86986f0e.chunk.js.map",
     "runtime-main.js": "/greedwald/static/js/runtime-main.651b8ddc.js",
     "runtime-main.js.map": "/greedwald/static/js/runtime-main.651b8ddc.js.map",
     "static/js/2.5dbec7b6.chunk.js": "/greedwald/static/js/2.5dbec7b6.chunk.js",
@@ -31,6 +31,6 @@
   "entrypoints": [
     "static/js/runtime-main.651b8ddc.js",
     "static/js/2.5dbec7b6.chunk.js",
-    "static/js/main.7b05810b.chunk.js"
+    "static/js/main.86986f0e.chunk.js"
   ]
 }
