@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/greedwald/static/js/main.108bf8f6.chunk.js",
-    "main.js.map": "/greedwald/static/js/main.108bf8f6.chunk.js.map",
-    "runtime-main.js": "/greedwald/static/js/runtime-main.3cab92f0.js",
-    "runtime-main.js.map": "/greedwald/static/js/runtime-main.3cab92f0.js.map",
-    "static/js/2.20484206.chunk.js": "/greedwald/static/js/2.20484206.chunk.js",
-    "static/js/2.20484206.chunk.js.map": "/greedwald/static/js/2.20484206.chunk.js.map",
+    "main.js": "/greedwald/static/js/main.7b05810b.chunk.js",
+    "main.js.map": "/greedwald/static/js/main.7b05810b.chunk.js.map",
+    "runtime-main.js": "/greedwald/static/js/runtime-main.651b8ddc.js",
+    "runtime-main.js.map": "/greedwald/static/js/runtime-main.651b8ddc.js.map",
+    "static/js/2.5dbec7b6.chunk.js": "/greedwald/static/js/2.5dbec7b6.chunk.js",
+    "static/js/2.5dbec7b6.chunk.js.map": "/greedwald/static/js/2.5dbec7b6.chunk.js.map",
     "index.html": "/greedwald/index.html",
-    "static/js/2.20484206.chunk.js.LICENSE.txt": "/greedwald/static/js/2.20484206.chunk.js.LICENSE.txt",
+    "static/js/2.5dbec7b6.chunk.js.LICENSE.txt": "/greedwald/static/js/2.5dbec7b6.chunk.js.LICENSE.txt",
     "static/media/ambient.de5ec0d7.mp3": "/greedwald/static/media/ambient.de5ec0d7.mp3",
     "static/media/blackBackground.2bf0eea7.jpg": "/greedwald/static/media/blackBackground.2bf0eea7.jpg",
     "static/media/city1i.6ab75a50.jpg": "/greedwald/static/media/city1i.6ab75a50.jpg",
@@ -29,8 +29,8 @@
     "static/media/woods2i.acb3e43c.jpg": "/greedwald/static/media/woods2i.acb3e43c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3cab92f0.js",
-    "static/js/2.20484206.chunk.js",
-    "static/js/main.108bf8f6.chunk.js"
+    "static/js/runtime-main.651b8ddc.js",
+    "static/js/2.5dbec7b6.chunk.js",
+    "static/js/main.7b05810b.chunk.js"
   ]
 }
