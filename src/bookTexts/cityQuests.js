@@ -4,6 +4,12 @@ import city4i from '../images/city4i.jpg';
 import city5i from '../images/city5i.jpg';
 import city7i from '../images/city7i.jpg';
 import city8i from '../images/city8i.jpg';
+import city9i from '../images/city9i.jpg';
+
+
+import abyssDagger from '../images/abyssDagger.svg';
+import tregmaulSword from '../images/tregmaulSword.svg';
+import suredinHammer from '../images/suredinHammer.svg';
 
 //Trade quests first button name should always be 'trade' and attempt to buy thing;
 //Difficulty 0 quests may not contain deathText;
@@ -61,7 +67,7 @@ export const cityQuests = [
             secondButtonName: 'second_choice'
         }
     },
-    // tavern fight
+    /* tavern fight */
     {
         id: 2,
         difficulty: 0,
@@ -111,7 +117,7 @@ export const cityQuests = [
             secondButtonName: 'second_choice'
         }
     },
-    // operating gang
+    /* operating gang */
     {
         id: 3,
         difficulty: 0,
@@ -156,7 +162,7 @@ export const cityQuests = [
             secondButtonName: 'death'
         }
     },
-    // merchant tregmaul 4
+    /* merchant tregmaul 4 */
     {
         id: 4,
         name: 'Merchant Tregmaul',
@@ -186,8 +192,18 @@ export const cityQuests = [
                 },
                 hero:{
                     xp: 500,
-                    gold: 500,
-                    artifact: 'Tregmaul Sword'
+                    gold: 0,
+                    artifact: {
+                        img:tregmaulSword,
+                        name: {
+                            en: 'Tregmaul Sword',
+                            ru: 'Трегмольский Меч'
+                        },
+                        description: {
+                            en: 'Dangerous Sword blablabla',
+                            ru: 'Опаснейший меч блаблабла'
+                        }
+                    }
                 } 
             },
             secondResult: {
@@ -215,13 +231,13 @@ export const cityQuests = [
                 }
             }
         },
-        itemCost: 500,
+        itemCost: 1500,
         names: {
             firstButtonName: 'trade',
             secondButtonName: 'second_choice'
         }
     },
-    // robber Konran 5
+    /* robber Konran 5 */
     {
         id: 5,
         name: 'Rob? Robber!',
@@ -301,7 +317,7 @@ export const cityQuests = [
             raceButtonName: 'race_choice'
         }
     },
-    // girl and basket 6
+    /* girl and basket 6 */
     {
         id: 6,
         name: 'Sparrow Guild acts',
@@ -404,11 +420,11 @@ export const cityQuests = [
             raceButtonName: 'race_choice'
         }
     },
-    //noble ring 7
+    /* noble ring 7 */
     {
         id: 7,
         name: 'Noble ring',
-        difficulty: 3,
+        difficulty: 15,
         image: city7i,
         text:{
             mainPageText: {
@@ -475,7 +491,17 @@ export const cityQuests = [
                         hero:{
                             xp: 120,
                             gold: 250,
-                            artifact: 'Abyss Dagger'
+                            artifact: {
+                                img: abyssDagger,
+                                name: {
+                                    en: 'Abyss Dagger',
+                                    ru: 'Кинжал Бездны'
+                                },
+                                description: {
+                                    en: 'Dangerous Dagger blablabla',
+                                    ru: 'Опаснейший кинжал блаблабла'
+                                }
+                            }
                         }
                     }
                 },
@@ -510,12 +536,12 @@ export const cityQuests = [
             raceButtonName: 'race_choice'
         }
     },
-    // dumb Wendells 8
+    /* dumb Wendells 8 */
     {
         id: 8,
         name: 'Noob vikings',
         image: city8i,
-        difficulty: 20,
+        difficulty: 40,
         text:{
             mainPageText: {
                 en: 'In the port of the city you meet northern barbarians (they call themselves Wendells). On the way to Gridwald they got caught in a storm and lost many crew members. Their drakkar needs to sail a few more miles to reach their destination, so they are now looking for a few people to help them. "For a good fee!" - shouted their chief WolfBiorn (famous sailor, as some people said in the port).',
@@ -567,6 +593,101 @@ export const cityQuests = [
         names: {
             firstButtonName: 'first_choice_safe',
             secondButtonName: 'second_choice'
+        }
+    },
+    /* mad Bardano 9 */
+    {
+        id: 9,
+        name: 'Mad Bardano',
+        image: city9i,
+        difficulty: 40,
+        text:{
+            mainPageText: {
+                en: 'On the street of the city you meet the huge crowd and an expensive manor surrounded by city guards. "HALT! The mad wizard is hiding in this house!" - the city guard tells you. You see fireballs flying out of the house. The city guards are hiding behind a high fence and apparently can\'t do anything.',
+                ru: 'На одной из улиц города Вы встречаете огромную толпу и дорогую усадьбу, окруженную городской стражей. "СТОЯТЬ! Безумный волшебник прячется в этом доме!" - кричит вам стражник. Вы видите как огенные шары вылетают из особняка. Городская стража прячется за высокой оградой усадьбы и видимо ничего не может сделать.'
+            },
+            firstButtonText: {
+                en: 'You think you can deal with this magician. You walk past the guards and prepare to fight with him.',
+                ru: 'Вы считаете что сможете справиться с этим магом. Вы проходите мимо стражи и готовитесь вступить в бой.'
+            },
+            secondButtonText: {
+                en: 'You think that dealing with this mage is too hard for you. It looks like he is completely nuts and the city guard are unlikely to pay you much for this. So you leave.',
+                ru: 'Вы считаете, что разобраться с этим магом вам будет очень сложно. Видимо он "крепкий орешек", а городская старжа вряд ли заплатит вам хорошо. Поэтому вы решаете уйти.'
+            },
+            raceButtonText: [
+                {
+                    dwarf: {
+                        en: 'Since you are a dwarf, you have an innate resistance to magic (as well as a craving for beer). You hope this will help you to neutralize him.',
+                        ru: 'Так как вы дворф, вы обладаете врожденной устойчивостью к магии (а так же тягой к пиву). Вы надеетесь, что это поможет вам нейтрализовать его.'
+                    }
+                }
+            ]
+        },
+        results: {
+            firstResult: {
+                text:{
+                    mainPageText: {
+                        en: 'You dodge each fireball of the mad wizard, get close to him and strike, but before dying, the magician manages to set fire to his house. In his mansion you see a lot of gold and take with you as much as you can, before the fire starts.',
+                        ru: 'Вы уворачиваетесь от каждого огненного шара волшебника-безумца, подбираетесь к нему вплотную и наносите удар, но перед смертью маг успевает поджечь свой дом. В его особняке вы находите много золота и берете с собой столько, сколько можете, до того как разгарается огонь.'
+                    }
+                },
+                hero:{
+                    xp: 300,
+                    gold: 500,
+                }
+            },
+            secondResult: {
+                text:{
+                    mainPageText: {
+                        en: 'You are leaving this place. A few days later you will find out that the mad wizard Bardano held out all the day until he accidentally burned his house and himself down.',
+                        ru: 'Вы покидаете это место. Спустя несколько дней вы узнаете что безумный маг Бардано держался целый день пока случайно не сжег свой дом и себя вместе с ним.'
+                    },
+                },
+                hero:{
+                    xp: 50,
+                    gold: 0,
+                }
+            },
+            raceResult: [
+                {
+                    dwarf : {
+                        text:{
+                            mainPageText: {
+                                en: 'You dodge almost each fireball of the wizard-madman. A fireball that hits you does no damage to you (looks like your magic resistance works). Then for a second you think about the fact, that you already want a beer(looks like craving for beer works too). You get close to him and strike, but before dying, the magician manages to set fire to his house. In his mansion you see a lot of gold and take with you as much as you can, before the fire starts. In his weaponry you also find Suredin\'s Hammer - ancient hammer, forged by dwarves of Grims-Ogr-Keraque.',
+                                ru: 'Вы уворачиваетесь почти от каждого огненного шара волшебника-безумца. Шар, который в вас все-таки попадает, не наносит вам урона (видимо ваше сопротивление магии работает). На секунду Вы задумываетесь о том, что уже хотите пива (видимо тяга к пиву тоже раотает). Вы подбираетесь к магу вплотную и наносите удар, но перед смертью маг успевает поджечь свой дом. В его особняке Вы находите много золота и берете с собой столько, сколько можете, до того как разгарается огонь. В его оружейной Вы также находите Молот Суредина - древний молот, выкованный дворфами из Гримс-Огр-Керака.'
+                            },
+                        },
+                        hero:{
+                            xp: 320,
+                            gold: 350,
+                            artifact: {
+                                img: suredinHammer,
+                                name: {
+                                    en: 'Suredin\'s Hammer',
+                                    ru: 'Молот Суредина'
+                                },
+                                description: {
+                                    en: 'Dangerous Hammer blablabla',
+                                    ru: 'Опаснейший молот блаблабла'
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            deathResult: {
+                text:{
+                    deathText: {
+                        en: 'The mad wizard turned out to be too powerful and incinerated you like the devil!',
+                        ru: 'Безумный маг оказался слишком могущественным и испепелил вас как дьявол!'
+                    }
+                }
+            }
+        },
+        names: {
+            firstButtonName: 'first_choice',
+            secondButtonName: 'second_choice_safe',
+            raceButtonName: 'race_choice'
         }
     },
 ];

@@ -3,6 +3,10 @@ import styled, { keyframes } from 'styled-components';
 import scrollHeader from '../../images/scrollHeader.jpg';
 import pageBackground from '../../images/pageBackground.jpg';
 
+const PageWrapper = styled.div`
+  position: relative;
+`;
+
 const Image = styled.div`
   min-height: 50vh;
   max-height: 60vh;
@@ -16,7 +20,7 @@ const Image = styled.div`
   }
 `;
 
-const StyledWrapper = styled.div`
+const BookWrapper = styled.div`
   padding: 3rem 5% 5rem;
   animation: 1s ${props => props.isAnimated ? translate : 'none'} linear;
   font-weight: bold;
@@ -83,4 +87,4 @@ to {
 }
 `;
 
-export { Image, StyledWrapper, ButtonWrapper, MainTextWrapper };
+export { PageWrapper, Image, BookWrapper, ButtonWrapper, MainTextWrapper };

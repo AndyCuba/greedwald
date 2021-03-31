@@ -44,9 +44,12 @@ const CreditsButton = styled.button`
   right: 2.5rem;
   padding: 0.25rem 1rem;
   transition: all 2s;
-  &:hover{
+  &:hover {
     border-radius: 7px;
     transform: scale(1.2);
+  }
+  &:focus {
+    outline: none;
   }
 `;
 

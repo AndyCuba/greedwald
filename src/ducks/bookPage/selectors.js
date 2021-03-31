@@ -13,6 +13,7 @@ const itemCostSelector = state => state.book.itemCost;
 const difficultySelector = state => state.book.currentDifficulty;
 const deathTextSelector = state => state.book.text.deathText;
 const heroNameSelector = state => state.book.hero.heroName;
+const artifactsSelector = state => state.book.hero.artifacts;
 const imageSelector = state => state.book.image;
 
 export { 
@@ -31,5 +32,6 @@ export {
     difficultySelector,
     deathTextSelector,
     heroNameSelector,
+    artifactsSelector,
     imageSelector
 };

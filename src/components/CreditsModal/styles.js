@@ -2,15 +2,12 @@ import { keyframes } from 'styled-components';
 import Modal from 'styled-react-modal';
 
 
-const slide = keyframes`
+const fade = keyframes`
   from {
-    height: 10%;
-    width: 30%;
+    opacity: 0;
   }
-
   to {
-    height: 40%;
-    width: 50%;
+    opacity: 1;
   }
 `;
 
@@ -22,7 +19,7 @@ export const StyledModal = Modal.styled`
     display: flex;
     justify-content: center;
     background-color: white;
-    animation: 1s ${slide} linear;
+    animation: 1s ${fade} linear;
     cursor: default;
     z-index: 40;
 `;

@@ -1,6 +1,6 @@
 {
-  "name": "secretcomponents",
-  "version": "0.3.0",
+  "name": "greedwald",
+  "version": "0.4.0",
   "homepage": "https://andycuba.github.io/greedwald",
   "private": true,
   "dependencies": {

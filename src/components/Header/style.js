@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+
 import { 
     dwarfImage, 
     elfImage, 
     humanImage 
 } from '../../bookTexts/heroPickText';
+import bagIcon from '../../images/bagIcon.svg';
 import headerBackground from '../../images/scrollHeader.jpg';
 import coins from '../../images/coins.png';
 
@@ -27,7 +29,7 @@ const StyledHeader = styled.header`
     }
     div {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
+        grid-template-columns: repeat(auto-fit, minmax(130px, 170px));
         grid-gap: 2vw;
         justify-content: center;
         justify-items: end;
@@ -91,10 +93,23 @@ const GoldCoins = styled.span`
     cursor: pointer;
 `;
 
+const InventoryIcon = styled.div`
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(${bagIcon}) no-repeat center/cover;
+    justify-self: center;
+    transition: all 1s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
+
 export { 
     StyledHeader, 
     DwarfPortrait, 
     HumanPortrait, 
     ElfPortrait, 
-    GoldCoins 
+    GoldCoins,
+    InventoryIcon
 };

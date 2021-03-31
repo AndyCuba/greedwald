@@ -84,7 +84,7 @@ export const woodsQuests = [
     {
         id: 2,
         name: 'Wood elfs camp',
-        difficulty: 5,
+        difficulty: 20,
         image: woods2i,
         text:{
             mainPageText: {

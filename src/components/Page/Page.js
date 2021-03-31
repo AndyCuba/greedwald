@@ -17,7 +17,8 @@ import {
   itemCostSelector,
   raceButtonTextSelector,
   raceButtonNameSelector,
-  imageSelector
+  imageSelector,
+  artifactsSelector
 } from '../../ducks/bookPage/selectors';
 import { ACTION_TURN_BOOKPAGE } from '../../ducks/bookPage/actions';
 import {
@@ -25,16 +26,18 @@ import {
   animateTransition,
 } from '../../ducks/animations';
 import { 
+  PageWrapper,
   ButtonWrapper, 
   Image, 
   MainTextWrapper, 
-  StyledWrapper 
+  BookWrapper
 } from './style';
 import Header from '../Header/Header';
 import Death from '../Death/Death';
 import { languageSelector } from '../../ducks/language';
 import HeroPick from '../HeroPick/HeroPick';
 import { ACTION_CHANGE_START_BUTTON } from '../../ducks/startButton';
+import Inventory from '../Inventory/Inventory';
 
 const Page = (props) => {
   const dispatch = useDispatch();
@@ -58,6 +61,7 @@ const Page = (props) => {
   const deathText = useSelector(deathTextSelector);
   const english = useSelector(languageSelector);
   const questImage = useSelector(imageSelector);
+  const uniqueArtifacts = new Set(useSelector(artifactsSelector));
 
   const handleClick = (e) => {
     
@@ -69,9 +73,9 @@ const Page = (props) => {
   const calculateDeathPercentage = (difference) => {
     if(5 < difference < 10) {
       return 0.4;
-    } else if (10 <= difference <= 20){
+    } else if (10 <= difference <= 30){
       return 0.6;
-    } else if (difference > 20){
+    } else if (difference > 30){
       return 0.85;
     } else {
       return 0.2;
@@ -79,7 +83,11 @@ const Page = (props) => {
   };
 
   const calculateDeathChance = (buttonName, raceAdvantage = 0) => {
-    if((currentDifficulty - raceAdvantage) > lvl && (buttonName !== 'death') && (buttonName !== 'first_choice_safe') && (buttonName !== 'second_choice_safe')) {
+    console.log(currentDifficulty - raceAdvantage - (uniqueArtifacts.size * 20))
+    if((currentDifficulty - raceAdvantage - (uniqueArtifacts.size * 20)) > lvl 
+      && (buttonName !== 'death') 
+      && (buttonName !== 'first_choice_safe') 
+      && (buttonName !== 'second_choice_safe')) {
       const random = Math.random();
       const difference = currentDifficulty - lvl;
       return (random > calculateDeathPercentage(difference)) ? buttonName : 'death';
@@ -99,13 +107,14 @@ const Page = (props) => {
   }, [mainText, dispatch]);
 
   return deathText ? (
-    <StyledWrapper isAnimated={isAnimated}>
+    <BookWrapper isAnimated={isAnimated}>
       <Death deathText={deathText} />
-    </StyledWrapper>
+    </BookWrapper>
   ) : ( isHeroPicked ?
-    (<div>
+    (<PageWrapper>
       <Header />
-      <StyledWrapper isAnimated={isAnimated}>
+      <Inventory />
+      <BookWrapper isAnimated={isAnimated}>
         
         <MainTextWrapper>
           {questImage && <Image background={questImage}/>}
@@ -128,7 +137,7 @@ const Page = (props) => {
             </button>
           )}
           {(raceButtonText && raceButtonText[0] !== undefined) ? (
-            <button name={calculateDeathChance(raceButtonName, 5)} onClick={handleClick}>
+            <button name={calculateDeathChance(raceButtonName, 15)} onClick={handleClick}>
               {english ? raceButtonText[0].en : raceButtonText[0].ru}
             </button>
           ) : null}
@@ -136,8 +145,8 @@ const Page = (props) => {
             {english ? "To Home" : "Вернуться в Меню"}
           </button>
         </ButtonWrapper>
-      </StyledWrapper>
-    </div>) : <HeroPick />
+      </BookWrapper>
+    </PageWrapper>) : <HeroPick />
   );
 };
 
