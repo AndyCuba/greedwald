@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import mainBackground from '../../images/mainBackground.jpg';
 import blackBackground from '../../images/blackBackground.jpg';
+import { infoSelector } from '../../ducks/info';
 
 const Style = createGlobalStyle`
         * {
@@ -20,6 +21,7 @@ const Style = createGlobalStyle`
             transition: ${props => 
                 props.hideBackground || props.background ? 'all 2s ease-in-out' :
                     'none'};
+            overflow-x:hidden;
             min-height: 100vh;
         }
     `;
@@ -27,10 +29,10 @@ const Style = createGlobalStyle`
 function GlobalStyle() {
     const background = useSelector(state => state.book.background);
     const hideBackground = useSelector(state => state.animations.hideBackground);
-    
+    const isInfoOpened = useSelector(infoSelector);
 
     return(
-        <Style background={background} hideBackground={hideBackground}></Style>
+        <Style background={background} hideBackground={hideBackground} isInfoOpened={isInfoOpened}></Style>
     );
 };
 

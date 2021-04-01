@@ -13,7 +13,7 @@ function Inventory() {
     
     return (
         <StyledDiv isOpen={isOpen}>
-            {uniqueArtifacts.size === 0 && <h2>Your inventory is empty</h2>}
+            {uniqueArtifacts.size === 0 && <h2>{english ? 'You have no artifacts' : 'У вас нет артефактов'}</h2>}
             {
             [...uniqueArtifacts].map((artifact, id) => 
                 <StyledItem key={id} title={english ? artifact.description.en : artifact.description.ru}>

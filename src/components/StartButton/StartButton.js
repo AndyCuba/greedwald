@@ -35,8 +35,8 @@ import {
         
         <ButtonContainer >
             <StyledLink onClick={handleClick} to='/page'>
-                <Button onMouseEnter={handleMouseEnter}>
-                    <Span>{english ? startButtonText.en : startButtonText.ru}</Span>
+                <Button >
+                    <Span onMouseEnter={handleMouseEnter}>{english ? startButtonText.en : startButtonText.ru}</Span>
                 </Button>
                 <Dragon showDragon={hideBackground}></Dragon>
             </StyledLink>

@@ -1,11 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { IntroWrapper, Heading, CreditsButton } from './style';
+import Info from '../Info/Info';
 import StartButton from '../StartButton/StartButton';
-import { ACTION_TOGGLE_MODAL } from '../../ducks/creditsModal';
 import Modal from '../CreditsModal/CreditsModal';
+import { ACTION_TOGGLE_MODAL } from '../../ducks/creditsModal';
 import { languageSelector } from '../../ducks/language';
 import { ACTION_SHOW_BACKGROUND } from '../../ducks/animations';
+import { 
+  IntroWrapper, 
+  Heading, 
+  CreditsButton 
+} from './style';
 
 function Introduction() {
   const dispatch = useDispatch();
@@ -28,6 +33,7 @@ function Introduction() {
       <CreditsButton onClick={toggleModal} >
           {english ? 'Credits' : 'Авторы'}
       </CreditsButton>
+      <Info />
     </IntroWrapper>
   );
 }

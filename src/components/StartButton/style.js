@@ -47,19 +47,12 @@ export const Span = styled.span`
     text-align: center;
     font-family: 'Kurale', serif;
     font-size: 35px;
-    line-height: 70px;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
     background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 `;  
-  
-// ${StyledLink}:hover &{
-//     bottom: 196px;
-//     height: 250px;
-//     transition: all 2s ease-in-out;  
-// }
 
 export const Dragon = styled.div`
     width: ${props => props.showDragon ? '300px' : '250px'};

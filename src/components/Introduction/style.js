@@ -41,8 +41,7 @@ const CreditsButton = styled.button`
   bottom: 2rem;
   border: none;
   background-color: transparent;
-  right: 2.5rem;
-  padding: 0.25rem 1rem;
+  right: 1rem;
   transition: all 2s;
   &:hover {
     border-radius: 7px;

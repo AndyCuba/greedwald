@@ -6,11 +6,11 @@ import inventoryScroll from '../../images/inventoryScroll.png';
 
 const StyledDiv = styled.div`
   transition: all 1s ease-in-out;
-  padding: 45px 85px 30px;
+  padding: 55px 95px 30px;
   left: -40px;
-  top: 30%;
-  height: 57%;
-  width: 400px;
+  top: 20%;
+  height: 64%;
+  width: 450px;
   position: fixed;
   background: url(${inventoryScroll}) no-repeat top/cover;
   z-index: 100;
@@ -30,7 +30,7 @@ const StyledItem = styled.div`
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   width: 100%;
-  min-height: 24%;
+  min-height: 20%;
   padding: 3px;
   display: grid;
   grid-template-columns: minmax(30px, 0.25fr) minmax(30px, 0.75fr);
@@ -41,8 +41,8 @@ const StyledItem = styled.div`
 
 const ArtifactImage = styled.div`
   background: url(${props => props.background}) no-repeat center/contain;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   ${StyledItem}:hover &{
     transform: scale(1.01);
   }

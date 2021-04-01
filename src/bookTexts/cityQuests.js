@@ -10,6 +10,7 @@ import city9i from '../images/city9i.jpg';
 import abyssDagger from '../images/abyssDagger.svg';
 import tregmaulSword from '../images/tregmaulSword.svg';
 import suredinHammer from '../images/suredinHammer.svg';
+import ringOfWisdom from '../images/ringOfWisdom.svg';
 
 //Trade quests first button name should always be 'trade' and attempt to buy thing;
 //Difficulty 0 quests may not contain deathText;
@@ -24,8 +25,8 @@ export const cityQuests = [
         image: city1i,
         text:{
             mainPageText: {
-                en: 'In the city you take the task to kill the local witch, but when you go to sleep she finds you and attacks!',
-                ru: 'В городе вы берете задание на убийство местной ведьмы, но когда вы ложитесь спать она находит вас и нападает!'
+                en: 'In the city church you take the task to kill the famous witch, Morena Hallewell. When you go to sleep in the tavern she finds you and attacks!',
+                ru: 'В городской церкви Вы берете задание на убийство известной ведьмы, Морены Холлэвелл. Как только Вы ложитесь спать в таверне она находит вас и нападает!'
             },
             firstButtonText: {
                 en: 'Try to kill evil witch.',
@@ -40,8 +41,8 @@ export const cityQuests = [
             firstResult: {
                 text:{
                     mainPageText: {
-                        en: 'Congrats! You killed the witch!',
-                        ru: 'Вы смогли уничтожить ведьму!'
+                        en: 'Using all the skills that you managed to learn you defeat her. The abbot pays you the promised gold.',
+                        ru: 'Используя все навыки, которые вам удалось освоить вы побеждаете ее! Аббат платит вам обещанное золото.'
                     }
                 },
                 hero:{
@@ -61,13 +62,21 @@ export const cityQuests = [
                     gold: 0,
                 }
             },
+            deathResult: {
+                text:{
+                    deathText: {
+                        en: 'Her spells were too strong for you, she paralized you and stubbed you like a pig!',
+                        ru: 'Ее чары оказались слишком сильными, она парализовала вас, а затем зарезала как свинью!'
+                    }
+                }
+            }
         },
         names: {
             firstButtonName: 'first_choice',
             secondButtonName: 'second_choice'
         }
     },
-    /* tavern fight */
+    /* tavern fight 2 */
     {
         id: 2,
         difficulty: 0,
@@ -117,7 +126,7 @@ export const cityQuests = [
             secondButtonName: 'second_choice'
         }
     },
-    /* operating gang */
+    /* operating gang 3 */
     {
         id: 3,
         difficulty: 0,
@@ -162,7 +171,7 @@ export const cityQuests = [
             secondButtonName: 'death'
         }
     },
-    /* merchant tregmaul 4 */
+    /* merchant tregmaul 4 (artifacts - tregmaul sword)*/
     {
         id: 4,
         name: 'Merchant Tregmaul',
@@ -420,11 +429,11 @@ export const cityQuests = [
             raceButtonName: 'race_choice'
         }
     },
-    /* noble ring 7 */
+    /* noble ring 7 (artifacts - ring of wisdom/ abyss dagger)*/
     {
         id: 7,
         name: 'Noble ring',
-        difficulty: 15,
+        difficulty: 20,
         image: city7i,
         text:{
             mainPageText: {
@@ -516,7 +525,17 @@ export const cityQuests = [
                         hero:{
                             xp: 300,
                             gold: 20,
-                            artifact: 'Elven ring of Wisdom'
+                            artifact: {
+                                img: ringOfWisdom,
+                                name: {
+                                    en: 'Ring of Wisdom',
+                                    ru: 'Кольцо Мудрости'
+                                },
+                                description: {
+                                    en: 'Dangerous ring blablabla',
+                                    ru: 'Опаснейший кольцо блаблабла'
+                                }
+                            }
                         }
                     }
                 }
@@ -595,7 +614,7 @@ export const cityQuests = [
             secondButtonName: 'second_choice'
         }
     },
-    /* mad Bardano 9 */
+    /* mad Bardano 9 (artifacts - suredin hammer)*/
     {
         id: 9,
         name: 'Mad Bardano',
