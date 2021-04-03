@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/greedwald/static/js/main.4cc64430.chunk.js",
-    "main.js.map": "/greedwald/static/js/main.4cc64430.chunk.js.map",
+    "main.js": "/greedwald/static/js/main.f985aa0a.chunk.js",
+    "main.js.map": "/greedwald/static/js/main.f985aa0a.chunk.js.map",
     "runtime-main.js": "/greedwald/static/js/runtime-main.63e4c6e9.js",
     "runtime-main.js.map": "/greedwald/static/js/runtime-main.63e4c6e9.js.map",
-    "static/js/2.97d6ef24.chunk.js": "/greedwald/static/js/2.97d6ef24.chunk.js",
-    "static/js/2.97d6ef24.chunk.js.map": "/greedwald/static/js/2.97d6ef24.chunk.js.map",
+    "static/js/2.b24898ed.chunk.js": "/greedwald/static/js/2.b24898ed.chunk.js",
+    "static/js/2.b24898ed.chunk.js.map": "/greedwald/static/js/2.b24898ed.chunk.js.map",
     "index.html": "/greedwald/index.html",
-    "static/js/2.97d6ef24.chunk.js.LICENSE.txt": "/greedwald/static/js/2.97d6ef24.chunk.js.LICENSE.txt",
+    "static/js/2.b24898ed.chunk.js.LICENSE.txt": "/greedwald/static/js/2.b24898ed.chunk.js.LICENSE.txt",
     "static/media/abyssDagger.c056704d.svg": "/greedwald/static/media/abyssDagger.c056704d.svg",
     "static/media/ambient.de5ec0d7.mp3": "/greedwald/static/media/ambient.de5ec0d7.mp3",
     "static/media/bagIcon.6ef974c0.svg": "/greedwald/static/media/bagIcon.6ef974c0.svg",
@@ -39,7 +39,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.63e4c6e9.js",
-    "static/js/2.97d6ef24.chunk.js",
-    "static/js/main.4cc64430.chunk.js"
+    "static/js/2.b24898ed.chunk.js",
+    "static/js/main.f985aa0a.chunk.js"
   ]
 }
