@@ -57,42 +57,86 @@ export const bookReducer = (state = initialBookState, action) => {
                 itemCost: action.itemCost
             };
         case SHOW_FIRST_RESULT:
-            return {
-                ...state,
-                text: { 
-                    ...state.results.firstResult.text, 
-                    firstButtonText: {
-                        en: 'Continue',
-                        ru: 'Продолжить'
-                    }
-                },
-                names: state.results.firstResult.names,
-                hero: {
-                    ...state.hero,
-                    xp: state.hero.xp + state.results.firstResult.hero.xp + action.additionalXP,
-                    gold: state.hero.gold + state.results.firstResult.hero.gold + action.additionalGold
-                },
-                currentDifficulty: '',
-                image: ''
-            };
+            if(state.results.firstResult.hero.artifact) {
+                return {
+                    ...state,
+                    text: { 
+                        ...state.results.firstResult.text, 
+                        firstButtonText: {
+                            en: 'Continue',
+                            ru: 'Продолжить'
+                        }
+                    },
+                    names: state.results.firstResult.names,
+                    hero: {
+                        ...state.hero,
+                        xp: state.hero.xp + state.results.firstResult.hero.xp + action.additionalXP,
+                        gold: state.hero.gold + state.results.firstResult.hero.gold + action.additionalGold,
+                        artifacts: [ ...state.hero.artifacts, state.results.firstResult.hero.artifact ]
+                    },
+                    currentDifficulty: '',
+                    image: ''
+                };
+            } else {
+                return {
+                    ...state,
+                    text: { 
+                        ...state.results.firstResult.text, 
+                        firstButtonText: {
+                            en: 'Continue',
+                            ru: 'Продолжить'
+                        }
+                    },
+                    names: state.results.firstResult.names,
+                    hero: {
+                        ...state.hero,
+                        xp: state.hero.xp + state.results.firstResult.hero.xp + action.additionalXP,
+                        gold: state.hero.gold + state.results.firstResult.hero.gold + action.additionalGold
+                    },
+                    currentDifficulty: '',
+                    image: ''
+                };
+            }
         case SHOW_SECOND_RESULT:
-            return {
-                ...state,
-                text: { 
-                    ...state.results.secondResult.text,
-                    firstButtonText: {
-                        en: 'Continue',
-                        ru: 'Продолжить'
-                    } 
-                },
-                names: state.results.secondResult.names,
-                hero: {
-                    ...state.hero,
-                    xp: state.hero.xp + state.results.secondResult.hero.xp + action.additionalXP,
-                    gold: state.hero.gold + state.results.secondResult.hero.gold + action.additionalGold
-                },
-                currentDifficulty: '',
-                image: ''
+            if(state.results.secondResult.hero.artifact) {
+                return {
+                    ...state,
+                    text: { 
+                        ...state.results.secondResult.text,
+                        firstButtonText: {
+                            en: 'Continue',
+                            ru: 'Продолжить'
+                        } 
+                    },
+                    names: state.results.secondResult.names,
+                    hero: {
+                        ...state.hero,
+                        xp: state.hero.xp + state.results.secondResult.hero.xp + action.additionalXP,
+                        gold: state.hero.gold + state.results.secondResult.hero.gold + action.additionalGold,
+                        artifacts: [ ...state.hero.artifacts, state.results.secondResult.hero.artifact ]
+                    },
+                    currentDifficulty: '',
+                    image: ''
+                };
+            } else {
+                return {
+                    ...state,
+                    text: { 
+                        ...state.results.secondResult.text,
+                        firstButtonText: {
+                            en: 'Continue',
+                            ru: 'Продолжить'
+                        } 
+                    },
+                    names: state.results.secondResult.names,
+                    hero: {
+                        ...state.hero,
+                        xp: state.hero.xp + state.results.secondResult.hero.xp + action.additionalXP,
+                        gold: state.hero.gold + state.results.secondResult.hero.gold + action.additionalGold
+                    },
+                    currentDifficulty: '',
+                    image: ''
+                };
             };
         case SHOW_DEATH_RESULT:
             return {

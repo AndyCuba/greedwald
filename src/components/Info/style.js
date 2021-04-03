@@ -45,18 +45,18 @@ const InfoPage = styled.div`
 `;
 
 const InfoIcon = styled.div`
-    width: 3.5rem;
-    height: 3.5rem;
-    background: url(${infoIcon}) no-repeat center/cover;
-    position: absolute;
-    bottom: 1.7rem;
-    left: 1rem;
-    cursor: pointer;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.3);
-    &:active {
-        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
-        transform: scale(0.95);
-    }
+  width: 3.5rem;
+  height: 3.5rem;
+  background: url(${infoIcon}) no-repeat center/cover;
+  position: absolute;
+  bottom: 1.7rem;
+  left: 1rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.3);
+  &:active {
+      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+      transform: scale(0.95);
+  }
 `;
 
 export { InfoPage, InfoIcon };

@@ -13,7 +13,7 @@ import {
     Span
 } from './style';
 
-  function StartButton() {
+function StartButton() {
         
     const dispatch = useDispatch();
 
@@ -42,6 +42,6 @@ import {
             </StyledLink>
         </ButtonContainer>    
     );
-  };
+};
   
-  export default StartButton;
+export default StartButton;

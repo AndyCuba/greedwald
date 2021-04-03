@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 import Info from '../Info/Info';
 import StartButton from '../StartButton/StartButton';
@@ -11,10 +12,12 @@ import {
   Heading, 
   CreditsButton 
 } from './style';
+import { ACTION_LOAD_INTRODUCTION, loadIntroductionSelector } from '../../ducks/fetching';
 
 function Introduction() {
   const dispatch = useDispatch();
   const english = useSelector(languageSelector);
+  const loading = useSelector(loadIntroductionSelector)
   const toggleModal = () => {
     dispatch(ACTION_TOGGLE_MODAL);
   };
@@ -23,18 +26,21 @@ function Introduction() {
     dispatch(ACTION_SHOW_BACKGROUND)
   };
 
+  useEffect(() => {
+    dispatch(ACTION_LOAD_INTRODUCTION)
+  }, [dispatch])
+
   return (
-    <IntroWrapper onClick={handleClick}>
-      <Heading>{english ? 'Travel to Greedwald' : 'Путешествие в Гридвальд'}</Heading>
-
+    
+      loading ? (<h1>loading</h1>) : (<IntroWrapper onClick={handleClick}><><Heading>{english ? 'Travel to Greedwald' : 'Путешествие в Гридвальд'}</Heading>
       <StartButton />
-
       <Modal />
       <CreditsButton onClick={toggleModal} >
           {english ? 'Credits' : 'Авторы'}
       </CreditsButton>
-      <Info />
-    </IntroWrapper>
+      <Info /></></IntroWrapper>)
+      
+    
   );
 }
 
