@@ -709,4 +709,88 @@ export const cityQuests = [
             raceButtonName: 'race_choice'
         }
     },
+    /* bandits on the street 10 */
+    {
+        id: 10,
+        name: 'Dangerous drunk street bandits',
+        image: city9i,
+        difficulty: 2,
+        text:{
+            mainPageText: {
+                en: 'On the street of the city you meet three drunkards. By their appearance, you can say that they drank for a week or more (and by the smell you can tell that they haven\'t washed for a month). "Your money or your life..." - one of them barely speaks.',
+                ru: 'На одной из улиц города Вы встречаете трех пъянчуг. По их внешнему виду вы можете сказать, что они пили недлю, а может и больше (а по запаху можно сказать, что они не мылись месяц). "Кошелек или жизнь..." - едва говорит один из них.'
+            },
+            firstButtonText: {
+                en: 'Apparently they aren\'t capable of anything and don\'t pose a serious threat to you. You decide to teach these inept bandits a lesson.',
+                ru: 'Видимо они ни на что не способны и не представляют для вас серьезной угрозы. Вы решаете преподать урок этим неумелым бандитам.'
+            },
+            secondButtonText: {
+                en: 'You aren\'t going to waste time on them, so you decide to just walk by.',
+                ru: 'Вы не собираетесь тратить на них время, поэтому решаете просто пройти мимо.'
+            },
+            raceButtonText: [
+                {
+                    dwarf: {
+                        en: 'For a long time your fists itched, the nature of the dwarf doesn\'t allow you to pass by.',
+                        ru: 'Давно у вас чесались кулаки, натура дворфа не дает вам пройти мимо.'
+                    }
+                }
+            ]
+        },
+        results: {
+            firstResult: {
+                text:{
+                    mainPageText: {
+                        en: 'Every drunk gets hit after which every drunk is knocked out. You leave the place with a satisfied smile.',
+                        ru: 'Каждый пьяница получает по удару после чего отправляется в нокаут. Вы покидаете это место с довольной улыбкой.'
+                    }
+                },
+                hero:{
+                    xp: 100,
+                    gold: 0,
+                }
+            },
+            secondResult: {
+                text:{
+                    mainPageText: {
+                        en: 'You are leaving this place. Drunks try to catch up with you but don\'t stay on their feet and fall.',
+                        ru: 'Вы покидаете это место. Пъяницы пытаются догнать вас, но не держаться на ногах и падают.'
+                    },
+                },
+                hero:{
+                    xp: 20,
+                    gold: 0,
+                }
+            },
+            raceResult: [
+                {
+                    dwarf: {
+                        text:{
+                            mainPageText: {
+                                en: 'Every drunk gets hit after which is knocked out. You are thirsty, and the beer in the local tavern is expensive, so you take their coins and leave them.',
+                                ru: 'Каждый пьяница получает по удару после чего отправляется в нокаут. Вас мучает жажда, а пиво в местной таверне не дешевое, поэтому вы забираете их монеты и уходите.'
+                            },
+                        },
+                        hero:{
+                            xp: 100,
+                            gold: 25,
+                        }
+                    }
+                }
+            ],
+            deathResult: {
+                text:{
+                    deathText: {
+                        en: 'It was a stupid idea to fight them without melee weapons. The thugs took out knives and stabbed you in the alley.',
+                        ru: 'Это была глупая идея - драться с ними без холодного оружия. Бандиты достали ножи и зарезали вас в подворотне.'
+                    }
+                }
+            }
+        },
+        names: {
+            firstButtonName: 'first_choice',
+            secondButtonName: 'second_choice_safe',
+            raceButtonName: 'race_choice'
+        }
+    },
 ];

@@ -1,4 +1,5 @@
 import woods2i from '../images/woods2i.jpg';
+import eredhensArmor from '../images/eredhensArmor.svg';
 
 export const woodsQuests = [
     /* hobgoblin 1 */
@@ -198,7 +199,7 @@ export const woodsQuests = [
                     xp: 200,
                     gold: 300,
                     artifact: {
-                        img: '',
+                        img: eredhensArmor,
                         name: {
                             en: 'Scale armor of Eredhen',
                             ru: 'Чешуйчатая броня Эредена'
@@ -234,7 +235,7 @@ export const woodsQuests = [
                         xp: 230,
                         gold: 300,
                         artifact: {
-                            img: '',
+                            img: eredhensArmor,
                             name: {
                                 en: 'Scale armor of Eredhen',
                                 ru: 'Чешуйчатая броня Эредена'

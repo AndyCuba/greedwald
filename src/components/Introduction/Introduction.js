@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 
 import Info from '../Info/Info';
 import StartButton from '../StartButton/StartButton';
@@ -12,7 +11,7 @@ import {
   Heading, 
   CreditsButton 
 } from './style';
-import { ACTION_LOAD_INTRODUCTION, loadIntroductionSelector } from '../../ducks/fetching';
+import { loadIntroductionSelector } from '../../ducks/fetching';
 
 function Introduction() {
   const dispatch = useDispatch();
@@ -25,10 +24,6 @@ function Introduction() {
   const handleClick = () => {
     dispatch(ACTION_SHOW_BACKGROUND)
   };
-
-  useEffect(() => {
-    dispatch(ACTION_LOAD_INTRODUCTION)
-  }, [dispatch])
 
   return (
     
