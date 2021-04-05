@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/greedwald/static/js/main.f985aa0a.chunk.js",
-    "main.js.map": "/greedwald/static/js/main.f985aa0a.chunk.js.map",
+    "main.js": "/greedwald/static/js/main.11b464c1.chunk.js",
+    "main.js.map": "/greedwald/static/js/main.11b464c1.chunk.js.map",
     "runtime-main.js": "/greedwald/static/js/runtime-main.63e4c6e9.js",
     "runtime-main.js.map": "/greedwald/static/js/runtime-main.63e4c6e9.js.map",
     "static/js/2.b24898ed.chunk.js": "/greedwald/static/js/2.b24898ed.chunk.js",
@@ -23,6 +23,7 @@
     "static/media/dragonHead.4de26e53.jpg": "/greedwald/static/media/dragonHead.4de26e53.jpg",
     "static/media/dwarf.e7a67f23.jpg": "/greedwald/static/media/dwarf.e7a67f23.jpg",
     "static/media/elf.50726795.jpeg": "/greedwald/static/media/elf.50726795.jpeg",
+    "static/media/eredhensArmor.719181dd.svg": "/greedwald/static/media/eredhensArmor.719181dd.svg",
     "static/media/human.24cf64eb.jpg": "/greedwald/static/media/human.24cf64eb.jpg",
     "static/media/infoBackground.3deff45e.png": "/greedwald/static/media/infoBackground.3deff45e.png",
     "static/media/infoIcon.72a6a61f.svg": "/greedwald/static/media/infoIcon.72a6a61f.svg",
@@ -40,6 +41,6 @@
   "entrypoints": [
     "static/js/runtime-main.63e4c6e9.js",
     "static/js/2.b24898ed.chunk.js",
-    "static/js/main.f985aa0a.chunk.js"
+    "static/js/main.11b464c1.chunk.js"
   ]
 }
