@@ -1,11 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 
 import mainBackground from '../../images/mainBackground.jpg';
 import blackBackground from '../../images/blackBackground.jpg';
 import { infoSelector } from '../../ducks/info';
-import { useEffect } from 'react';
-import { ACTION_LOAD_INTRODUCTION } from '../../ducks/fetching';
 
 const Style = createGlobalStyle`
         * {
@@ -29,21 +27,9 @@ const Style = createGlobalStyle`
     `;
 
 function GlobalStyle() {
-    const dispatch = useDispatch();
     const background = useSelector(state => state.book.background);
     const hideBackground = useSelector(state => state.animations.hideBackground);
     const isInfoOpened = useSelector(infoSelector);
-
-    useEffect(() => {
-        const background = new Image();
-
-        background.onload = () => {
-            dispatch(ACTION_LOAD_INTRODUCTION);
-        };
-
-        background.src = mainBackground;
-        
-    }, [dispatch]);
 
     return(
         <Style background={background} hideBackground={hideBackground} isInfoOpened={isInfoOpened}></Style>

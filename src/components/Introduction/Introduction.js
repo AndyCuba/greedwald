@@ -11,12 +11,10 @@ import {
   Heading, 
   CreditsButton 
 } from './style';
-import { loadIntroductionSelector } from '../../ducks/fetching';
 
 function Introduction() {
   const dispatch = useDispatch();
   const english = useSelector(languageSelector);
-  const loading = useSelector(loadIntroductionSelector)
   const toggleModal = () => {
     dispatch(ACTION_TOGGLE_MODAL);
   };
@@ -26,16 +24,18 @@ function Introduction() {
   };
 
   return (
-    
-      loading ? (<h1>loading</h1>) : (<IntroWrapper onClick={handleClick}><><Heading>{english ? 'Travel to Greedwald' : 'Путешествие в Гридвальд'}</Heading>
+    <IntroWrapper onClick={handleClick}>
+      <Heading>
+        {english ? 'Travel to Greedwald' : 'Путешествие в Гридвальд'}
+      </Heading>
       <StartButton />
       <Modal />
       <CreditsButton onClick={toggleModal} >
-          {english ? 'Credits' : 'Авторы'}
+        {english ? 'Credits' : 'Авторы'}
       </CreditsButton>
-      <Info /></></IntroWrapper>)
-      
-    
+      <Info />
+    </IntroWrapper>
+       
   );
 }
 

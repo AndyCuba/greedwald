@@ -19,9 +19,17 @@ function CreditsModal() {
         isOpen={isOpen}
         onBackgroundClick={toggleModal}
         onEscapeKeydown={toggleModal}>
-        <span>{english ? 
-          `Hi! It's me, Andy Daytona, developer of this game!` : 
-            `Привет! Это я, Andy Daytona, разработчик этой игры!`}</span>
+        {english ? (<div>Hi! It's me, Andy Daytona, developer of this game! 
+          <ul>
+            Here is my contacts:
+            <li><a href='https://by.linkedin.com/in/andydaytona'>LinkedIn</a></li>
+          </ul>
+          </div>) : (<div>Привет, это Andy Daytona, разработчик этой игры! 
+          <ul>
+            Вот мои контакты:
+            <li><a href='https://by.linkedin.com/in/andydaytona'>LinkedIn</a></li>
+          </ul>
+          </div>)}
       </StyledModal>
   );
 };

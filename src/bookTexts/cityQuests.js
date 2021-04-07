@@ -5,6 +5,7 @@ import city5i from '../images/city5i.jpg';
 import city7i from '../images/city7i.jpg';
 import city8i from '../images/city8i.jpg';
 import city9i from '../images/city9i.jpg';
+import city11i from '../images/city11i.png';
 
 
 import abyssDagger from '../images/abyssDagger.svg';
@@ -12,7 +13,7 @@ import tregmaulSword from '../images/tregmaulSword.svg';
 import suredinHammer from '../images/suredinHammer.svg';
 import ringOfWisdom from '../images/ringOfWisdom.svg';
 
-//Trade quests first button name should always be 'trade' and attempt to buy thing;
+//Trade quests first button name should always be 'trade' and attempt to buy item/artifact;
 //Difficulty 0 quests may not contain deathText;
 //Difficulty > 0 quests may cause death and should contain death variant;
 //Button names with "_safe" at the end won't cause death;
@@ -713,7 +714,6 @@ export const cityQuests = [
     {
         id: 10,
         name: 'Dangerous drunk street bandits',
-        image: city9i,
         difficulty: 2,
         text:{
             mainPageText: {
@@ -789,6 +789,90 @@ export const cityQuests = [
         },
         names: {
             firstButtonName: 'first_choice',
+            secondButtonName: 'second_choice_safe',
+            raceButtonName: 'race_choice'
+        }
+    },
+     /* gambling man 11 */
+    {
+        id: 11,
+        name: 'Ramble Gamble',
+        image: city11i,
+        difficulty: 30,
+        text:{
+            mainPageText: {
+                en: 'During your visit to the tavern, a stranger comes up to you. He is dressed well, but a little drunk. He invites you to play a local card game "Devil\'s Hand" with his friends, when they come, but not just play, but help him to cheat them. This stranger promises to give you 20% of the winnings.',
+                ru: 'Во время очередного визита в таверну к вам подходит незнакомец. Одет он хорошо, но немного пьян. Он предлагает вам сыграть в местную карточную игру "Рука Дьявола" с его друзьями когда они придут, но не просто сыграть, а помочь ему обыграть их и обмануть. Незнакомец обещает отдать вам 20% от выигрыша.'
+            },
+            firstButtonText: {
+                en: 'Agree to help him, you urgently need money.',
+                ru: 'Cогласиться помочь ему, вам срочно нужны деньги.'
+            },
+            secondButtonText: {
+                en: 'You aren\'t going to waste time on this fraud, so you decide order a whisky.',
+                ru: 'Вы не собираетесь тратить время на эту аферу, поэтому решаете просто заказать себе виски.'
+            },
+            raceButtonText: [
+                {
+                    human: {
+                        en: 'As a human you have played this game many times, you will try to play him and his friends.',
+                        ru: 'Как человек, вы уже много раз играли в эту игру, вы попытаетесь обыграть его и его друзей.'
+                    }
+                }
+            ]
+        },
+        results: {
+            firstResult: {
+                text:{
+                    mainPageText: {
+                        en: 'After a few games you manage to empty their pockets. The stranger gives you your 20% and then you leave.',
+                        ru: 'После нескольких партий вам удается обчитстить их карманы. Незнакомец отдает вам ваши 20% после чего вы уходите.'
+                    }
+                },
+                hero:{
+                    xp: 100,
+                    gold: 100,
+                }
+            },
+            secondResult: {
+                text:{
+                    mainPageText: {
+                        en: 'You order whiskey and then go to bed, while the players are having a good time.',
+                        ru: 'Вы заказываете виски а затем идете спать, в то время как игроки хорошо проводят время.'
+                    },
+                },
+                hero:{
+                    xp: 20,
+                    gold: -20,
+                }
+            },
+            raceResult: [
+                {
+                    human: {
+                        text:{
+                            mainPageText: {
+                                en: 'You play them, collect the whole jackpot and leave this place before everyone figure out what happened.',
+                                ru: 'Вы обыгрываете их собираете весь куш и покидаете это место до того, как все успевают сообразить, что произошло.'
+                            },
+                        },
+                        hero:{
+                            xp: 300,
+                            gold: 1000,
+                        }
+                    }
+                }
+            ],
+            deathResult: {
+                text:{
+                    deathText: {
+                        en: 'It was a stupid idea to try to play the local thugs and their famous leader Rigo. You played them, but on the same night you were stabbed to death by hired assassins.',
+                        ru: 'Это была глупая идея - пытаться обыграть местных головорезов и их главу Риго. Вы обыграли их, но в эту же ночь вас зарезали наемные убийцы.'
+                    }
+                }
+            }
+        },
+        names: {
+            firstButtonName: 'first_choice_safe',
             secondButtonName: 'second_choice_safe',
             raceButtonName: 'race_choice'
         }

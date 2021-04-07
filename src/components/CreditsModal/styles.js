@@ -22,4 +22,7 @@ export const StyledModal = Modal.styled`
     animation: 1s ${fade} linear;
     cursor: default;
     z-index: 40;
+    ul > li {
+      list-style: none;
+    }
 `;

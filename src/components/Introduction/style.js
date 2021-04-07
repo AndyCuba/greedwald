@@ -1,8 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-// import { StyledLink } from '../StartButton/style'
-
-
 const IntroWrapper = styled.div`
   max-width: 800px;
   margin: auto;

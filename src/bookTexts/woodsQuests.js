@@ -1,4 +1,5 @@
 import woods2i from '../images/woods2i.jpg';
+import woods3i from '../images/woods3i.jpg';
 import eredhensArmor from '../images/eredhensArmor.svg';
 
 export const woodsQuests = [
@@ -166,7 +167,7 @@ export const woodsQuests = [
         id: 3,
         name: 'dangerous swamp',
         difficulty: 70,
-        image: woods2i,
+        image: woods3i,
         text:{
             mainPageText: {
                 en: 'In the dangerous woods you find a swamp. In the swamp you see a sunken crypt, perhaps this is a part of the ruins of Eredhenians, an ancient people who lived here several millennia ago...',
