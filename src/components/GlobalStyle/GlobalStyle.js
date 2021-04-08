@@ -19,7 +19,7 @@ const Style = createGlobalStyle`
                     `url(${blackBackground}) no-repeat top/cover` :
                     `url(${props.background ? props.background : mainBackground}) no-repeat top/cover`};
             transition: ${props => 
-                props.hideBackground || props.background ? 'all 2s ease-in-out' :
+                props.hideBackground || props.background ? 'background-image 2s ease-in-out' :
                     'none'};
             overflow-x:hidden;
             min-height: 100vh;

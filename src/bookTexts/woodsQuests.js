@@ -174,8 +174,8 @@ export const woodsQuests = [
                 ru: 'В опасном лесу вы находите болото. Вы видите в болоте затонувший склеп, возможно это часть руин людей Эредена, древнего народа, который жил здесь несколько тысячелетий назад...',
             },
             firstButtonText: {
-                en: 'Anyone on the continent knows, the people of Eredhen were incredibly skillful in the armor and weapons manufacturing, so you decide to check the crypt.',
-                ru: 'Любой человек на континенте знает, что народ Эредена был невероятно искусен в производстве доспехов и оружия, поэтому вы решаете проверить склеп.'
+                en: 'Anyone on the continent knows, the ancient people of Eredhen were incredibly skillful in the armor and weapons manufacturing, so you decide to check the crypt.',
+                ru: 'Любой человек на континенте знает, что древний народ Эредена был невероятно искусен в производстве доспехов и оружия, поэтому вы решаете проверить склеп.'
             },
             secondButtonText: {
                 en: 'To get to the crypt you will have to go through the swamp, and what awaits you in the crypt you don\'t know, it\'s better not to go there. You decide to leave this place.',

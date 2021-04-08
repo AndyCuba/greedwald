@@ -6,6 +6,7 @@ import city7i from '../images/city7i.jpg';
 import city8i from '../images/city8i.jpg';
 import city9i from '../images/city9i.jpg';
 import city11i from '../images/city11i.png';
+import city12i from '../images/city12i.jpg';
 
 
 import abyssDagger from '../images/abyssDagger.svg';
@@ -17,7 +18,8 @@ import ringOfWisdom from '../images/ringOfWisdom.svg';
 //Difficulty 0 quests may not contain deathText;
 //Difficulty > 0 quests may cause death and should contain death variant;
 //Button names with "_safe" at the end won't cause death;
-
+//ищет помощников, чтобы уничтожить диких тварей свирепствующих на переправе.
+//
 export const cityQuests = [
     {
         id: 1,
@@ -793,7 +795,7 @@ export const cityQuests = [
             raceButtonName: 'race_choice'
         }
     },
-     /* gambling man 11 */
+    /* gambling man 11 */
     {
         id: 11,
         name: 'Ramble Gamble',
@@ -875,6 +877,65 @@ export const cityQuests = [
             firstButtonName: 'first_choice_safe',
             secondButtonName: 'second_choice_safe',
             raceButtonName: 'race_choice'
+        }
+    },
+    /* werewolf 12 */
+    {
+        id: 12,
+        name: 'werewolf',
+        image: city12i,
+        difficulty: 10,
+        text:{
+            mainPageText: {
+                en: 'In the city\'s main square you meet a nobleman named Antigon. He is looking for helpers to destroy the wild creatures raging at the crossing, near the village of Kalbenberg. "Two dangerous werewolves!" - nobleman said. He promises to pay well for killing the "creatures". But with one condition, he want to go with you.',
+                ru: 'На главной площади города вы встречаете аристократа по имени Антигон. Он ищет помощников, чтобы уничтожить диких тварей свирепствующих на переправе, недалеко от деревушки Кальбенберг. "Два очень опасных оборотня!" - сказал аристократ. Он обещает хорошо заплатить за уничтожение этих тварей, но с одним условием - он пойдет вместе с вами.'
+            },
+            firstButtonText: {
+                en: 'This guy is too suspicious and apparently does not tell all the details, so you decide not to help him.',
+                ru: 'Этот тип слишком подозрительный и видимо не рассказывает все подробности, поэтому Вы решаете не помогать ему.'
+            },
+            secondButtonText: {
+                en: 'Agree to help him, you urgently need money.',
+                ru: 'Cогласиться помочь ему, вам срочно нужны деньги.'
+            }
+        },
+        results: {
+            firstResult: {
+                text:{
+                    mainPageText: {
+                        en: 'You refuse to help him, and everything remains as it was, for now.',
+                        ru: 'Вы отказываетесь ему помогать, и все остается как было.'
+                    }
+                },
+                hero:{
+                    xp: 50,
+                    gold: 0,
+                }
+            },
+            secondResult: {
+                text:{
+                    mainPageText: {
+                        en: 'As soon as you leave the city, the aristocrat rips off his clothes and turns into a werewolf. You barely manage to draw your weapon and then dodge his attack. Then you give him the killing blow, after which he dies. You take the gold, that the aristocrat had and return to the city.',
+                        ru: 'Как только Вы покидаете город, аристократ срывает с себя одежду и превращается в оборотня. Вы с трудом успеваете выхватить оружие, после чего уклоняетесь от его атаки. Затем вы наносите ему смертельный удар, после чего он умирает. Вы забираете золото, которое было у аристократа и возвращаетесь в город.'
+                    },
+                },
+                hero:{
+                    xp: 200,
+                    gold: 50,
+                }
+            },
+            deathResult: {
+                text:{
+                    deathText: {
+                        en: 'As soon as you leave the city, the aristocrat rips off his clothes and turns into a werewolf. You can\'t manage to draw your weapon and the aristocrat tears your flesh to shreds.',
+                        ru: 'Как только Вы покидаете город, аристократ срывает с себя одежду и превращается в оборотня. Вы не успеваете достать оружие и аристократ разрывает вашу плоть в клочья.'
+                    }
+                }
+            }
+        },
+        names: {
+            firstButtonName: 'first_choice_safe',
+            secondButtonName: 'second_choice'
         }
     },
 ];

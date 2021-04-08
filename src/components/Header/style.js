@@ -29,11 +29,15 @@ const StyledHeader = styled.header`
     }
     div {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(130px, 170px));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
         grid-gap: 2vw;
         justify-content: center;
         justify-items: end;
         align-items: center;
+        @media (max-width: 980px) {
+            justify-items: center; 
+            grid-gap: 0;
+        } 
     }
     p {
         padding: 1rem;
@@ -54,6 +58,9 @@ const DwarfPortrait = styled.div`
     &:hover {
         transform: scale(1.1);
     }
+    @media (max-width: 980px) {
+        justify-self: center; 
+    } 
 `;
 
 const HumanPortrait = styled.div`
@@ -68,6 +75,9 @@ const HumanPortrait = styled.div`
     &:hover {
         transform: scale(1.1);
     }
+    @media (max-width: 980px) {
+        justify-self: center; 
+    } 
 `;
 
 const ElfPortrait = styled.div`
@@ -82,6 +92,9 @@ const ElfPortrait = styled.div`
     &:hover {
         transform: scale(1.1);
     }
+    @media (max-width: 980px) {
+        justify-self: center; 
+    } 
 `;
 
 const GoldCoins = styled.span`
@@ -91,6 +104,9 @@ const GoldCoins = styled.span`
     height: 40px;
     position: relative;
     cursor: pointer;
+    @media (max-width: 940px) {
+        justify-self: end; 
+    } 
 `;
 
 const InventoryIcon = styled.div`
@@ -105,11 +121,18 @@ const InventoryIcon = styled.div`
     }
 `;
 
+const XP = styled.p`
+    @media (max-width: 940px) {
+        display: none !important; 
+    } 
+`;
+
 export { 
     StyledHeader, 
     DwarfPortrait, 
     HumanPortrait, 
     ElfPortrait, 
     GoldCoins,
-    InventoryIcon
+    InventoryIcon,
+    XP
 };

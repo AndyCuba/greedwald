@@ -13,7 +13,8 @@ import {
     DwarfPortrait, 
     ElfPortrait, 
     GoldCoins, 
-    InventoryIcon
+    InventoryIcon,
+    XP
 } from './style';
 
 
@@ -42,7 +43,7 @@ function Header() {
                             <HumanPortrait /> : <ElfPortrait />
                     }
                 </div>
-                <p>{english ? 'XP' : 'Опыт'}:&nbsp;{xp}</p>
+                <XP>{english ? 'XP' : 'Опыт'}:&nbsp;{xp}</XP>
                 <p>{english ? 'Level' : 'Уровень'}:&nbsp;{lvl}</p>
                 {gold >= 0 ? (<p>{gold}&nbsp;<GoldCoins title={english ? 
                     'You definetly like it' : 

@@ -27,6 +27,9 @@ const Heading = styled.h1`
   font-size: 4rem;
   padding: 3rem;
   animation: 2s ${fadeIn} linear;
+  @media (max-width: 500px) {
+    font-size: 2.5rem; 
+  }
 `;
 
 const CreditsButton = styled.button`

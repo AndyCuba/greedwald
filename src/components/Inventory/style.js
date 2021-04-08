@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
   padding: 55px 95px 30px;
   left: -40px;
   top: 20%;
-  height: 64%;
+  height: 367px;
   width: 450px;
   position: fixed;
   background: url(${inventoryScroll}) no-repeat top/cover;
@@ -44,7 +44,7 @@ const ArtifactImage = styled.div`
   width: 2.5rem;
   height: 2.5rem;
   ${StyledItem}:hover &{
-    transform: scale(1.01);
+    transform: scale(1.05);
   }
 `;
 

@@ -83,7 +83,7 @@ const Page = (props) => {
   };
 
   const calculateDeathChance = (buttonName, raceAdvantage = 0) => {
-    console.log(currentDifficulty - raceAdvantage - (uniqueArtifacts.size * 20))
+    console.log('dangerous',(currentDifficulty - raceAdvantage - (uniqueArtifacts.size * 20)) > lvl, (currentDifficulty - raceAdvantage - (uniqueArtifacts.size * 20)));
     if((currentDifficulty - raceAdvantage - (uniqueArtifacts.size * 20)) > lvl 
       && (buttonName !== 'death') 
       && (buttonName !== 'first_choice_safe') 

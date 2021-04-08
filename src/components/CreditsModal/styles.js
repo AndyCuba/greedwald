@@ -12,7 +12,7 @@ const fade = keyframes`
 `;
 
 export const StyledModal = Modal.styled`
-    padding: 2rem;
+    padding: 5%;
     border-radius: 2px;
     width: 50%;
     height: 40%;
@@ -25,4 +25,10 @@ export const StyledModal = Modal.styled`
     ul > li {
       list-style: none;
     }
+    div, ul, a {
+      @media (max-width: 570px) {
+        font-size: 1rem; 
+      } 
+    }
+    
 `;

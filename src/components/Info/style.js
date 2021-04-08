@@ -29,10 +29,11 @@ to {
 `;
 
 const InfoPage = styled.div`
-  padding: 9% 5% 10%;
+  padding: 100px 5% 10%;
   visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
   height: 90%;
   width: 50%;
+  min-width: 360px;
   background: url(${infoBackground}) no-repeat center/cover;
   position: absolute;
   top: 3%;
@@ -42,6 +43,13 @@ const InfoPage = styled.div`
   z-index: 200;
   text-indent: 20px;
   text-align: center;
+  @media (max-width: 800px) {
+    left: 0;
+    width: 100%; 
+  }
+  @media (max-width: 980px) {
+    font-size: 0.85rem;
+  }
 `;
 
 const InfoIcon = styled.div`
@@ -57,6 +65,7 @@ const InfoIcon = styled.div`
       box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
       transform: scale(0.95);
   }
+  z-index: 1000;
 `;
 
 export { InfoPage, InfoIcon };
