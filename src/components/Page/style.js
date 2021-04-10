@@ -72,6 +72,7 @@ const ButtonWrapper = styled.div`
   }
   button:active {
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+    transform: scale(0.99);
   }
 `;
 

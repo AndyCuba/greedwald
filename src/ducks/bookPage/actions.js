@@ -1,11 +1,14 @@
 import { bookText } from '../../bookTexts/bookText';
 import { cityQuests } from '../../bookTexts/cityQuests';
+import { mountainQuests } from '../../bookTexts/mountainsQuests';
 import { woodsQuests } from '../../bookTexts/woodsQuests';
 
 const PICK_HERO = 'PICK_HERO',
         TURN_BOOKPAGE = 'TURN_BOOKPAGE',
         SHOW_FIRST_RESULT = 'SHOW_FIRST_RESULT',
         SHOW_SECOND_RESULT = 'SHOW_SECOND_RESULT',
+        SHOW_PREV_FIRST_RESULT = 'SHOW_PREV_FIRST_RESULT',
+        SHOW_PREV_SECOND_RESULT = 'SHOW_PREV_SECOND_RESULT',
         START_NEW_QUEST = 'START_NEW_QUEST',
         RESET_BOOK_STATE = 'RESET_BOOK_STATE',
         SHOW_DEATH_RESULT = 'SHOW_DEATH_RESULT',
@@ -85,6 +88,14 @@ const ACTION_SHOW_RACE_RESULT = (heroName) => {
     };
 };
 
+const ACTION_SHOW_PREV_FIRST_RESULT = {   
+    type: SHOW_PREV_FIRST_RESULT
+};
+
+const ACTION_SHOW_PREV_SECOND_RESULT = {
+    type: SHOW_PREV_SECOND_RESULT
+};
+
 const ACTION_TURN_BOOKPAGE = (buttonName, currentHero, goldDifference) => {
 
     const selectedQuests = [];
@@ -104,15 +115,26 @@ const ACTION_TURN_BOOKPAGE = (buttonName, currentHero, goldDifference) => {
         case 'woods':
             selectedQuests.unshift(getRandomQuest(woodsQuests));
             break;
+        case 'mountains':
+            selectedQuests.unshift(getRandomQuest(mountainQuests));
+            break;
         case 'first_choice':
             return ACTION_SHOW_FIRST_RESULT(currentHero);
-            //safe button name cant cause death
+            //ended with _safe buttons names cant cause death
         case 'first_choice_safe':
             return ACTION_SHOW_FIRST_RESULT(currentHero);
         case 'second_choice':
             return ACTION_SHOW_SECOND_RESULT(currentHero);
         case 'second_choice_safe':
             return ACTION_SHOW_SECOND_RESULT(currentHero);
+        case 'prev_first_choice':
+            return ACTION_SHOW_PREV_FIRST_RESULT;
+        case 'prev_first_choice_safe':
+            return ACTION_SHOW_PREV_FIRST_RESULT;
+        case 'prev_second_choice':
+            return  ACTION_SHOW_PREV_SECOND_RESULT;
+        case 'prev_second_choice_safe':
+            return  ACTION_SHOW_PREV_SECOND_RESULT;
         case 'trade':
             return ACTION_SHOW_TRADE_RESULT(goldDifference);
         case 'race_choice':
@@ -124,7 +146,7 @@ const ACTION_TURN_BOOKPAGE = (buttonName, currentHero, goldDifference) => {
     };
 
     const [currentQuest] = selectedQuests;
-
+    
     if(currentQuest.results) {
         return {
             type: START_NEW_QUEST,
@@ -173,6 +195,8 @@ export {
     TURN_BOOKPAGE,
     SHOW_FIRST_RESULT,
     SHOW_SECOND_RESULT,
+    SHOW_PREV_FIRST_RESULT,
+    SHOW_PREV_SECOND_RESULT,
     SHOW_RACE_RESULT,
     SHOW_TRADE_RESULT,
     SHOW_FAIL_TRADE_RESULT,

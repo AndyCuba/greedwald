@@ -2,6 +2,8 @@ import {
     RESET_BOOK_STATE,
     SHOW_FIRST_RESULT, 
     SHOW_SECOND_RESULT,
+    SHOW_PREV_FIRST_RESULT,
+    SHOW_PREV_SECOND_RESULT,
     SHOW_RACE_RESULT,
     SHOW_TRADE_RESULT,
     SHOW_FAIL_TRADE_RESULT,
@@ -37,6 +39,12 @@ export const bookReducer = (state = initialBookState, action) => {
                     secondResult: { 
                         ...state.results.secondResult,
                         ...action.results.secondResult
+                    },
+                    prevResults: {
+                        ...action.results.prevResults
+                    },
+                    nextResults: {
+                        ...action.results.nextResults
                     },
                     failResult: {
                         //It makes button name "Continue" after quest
@@ -137,6 +145,46 @@ export const bookReducer = (state = initialBookState, action) => {
                     currentDifficulty: '',
                     image: ''
                 };
+            };
+        case SHOW_PREV_FIRST_RESULT: 
+            return {
+                ...state,
+                text: { 
+                    ...state.results.prevResults.firstResult.text,
+                    ...state.text.nextButtons.prevFirstChoice
+                },
+                results: {
+                    ...state.results,
+                    firstResult: {
+                        ...state.results.firstResult,
+                        ...state.results.nextResults.first.firstResult
+                    },
+                    secondResult: {
+                        ...state.results.secondResult,
+                        ...state.results.nextResults.first.secondResult
+                    },
+                },
+                names: { ...state.names.nextNames.first },
+            };
+        case SHOW_PREV_SECOND_RESULT: 
+            return {
+                ...state,
+                text: { 
+                    ...state.results.prevResults.secondResult.text,
+                    ...state.text.nextButtons.prevSecondChoice
+                },
+                results: {
+                    ...state.results,
+                    firstResult: {
+                        ...state.results.firstResult, //for correct "continue" button names
+                        ...state.results.nextResults.second.firstResult
+                    },
+                    secondResult: {
+                        ...state.results.secondResult,
+                        ...state.results.nextResults.second.secondResult
+                    },
+                },
+                names: { ...state.names.nextNames.second },
             };
         case SHOW_DEATH_RESULT:
             return {

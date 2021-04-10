@@ -17,7 +17,7 @@ import { loadIntroductionSelector } from './ducks/fetching';
 const SpecialModalBackground = styled(BaseModalBackground)`
   background-color: rgba(21, 137, 183, 0.21);
   cursor: pointer;
-`
+`;
 
 function App() {
   const loading = useSelector(loadIntroductionSelector);

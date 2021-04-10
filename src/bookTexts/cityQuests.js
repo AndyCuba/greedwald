@@ -10,7 +10,7 @@ import city12i from '../images/city12i.jpg';
 
 
 import abyssDagger from '../images/abyssDagger.svg';
-import tregmaulSword from '../images/tregmaulSword.svg';
+import tregmaulHelmet from '../images/tregmaulHelmet.svg';
 import suredinHammer from '../images/suredinHammer.svg';
 import ringOfWisdom from '../images/ringOfWisdom.svg';
 
@@ -18,8 +18,6 @@ import ringOfWisdom from '../images/ringOfWisdom.svg';
 //Difficulty 0 quests may not contain deathText;
 //Difficulty > 0 quests may cause death and should contain death variant;
 //Button names with "_safe" at the end won't cause death;
-//ищет помощников, чтобы уничтожить диких тварей свирепствующих на переправе.
-//
 export const cityQuests = [
     {
         id: 1,
@@ -174,7 +172,7 @@ export const cityQuests = [
             secondButtonName: 'death'
         }
     },
-    /* merchant tregmaul 4 (artifacts - tregmaul sword)*/
+    /* merchant tregmaul 4 (artifacts - tregmaul helmet)*/
     {
         id: 4,
         name: 'Merchant Tregmaul',
@@ -186,8 +184,8 @@ export const cityQuests = [
                 ru: 'На местном рынке вы сталкиваетесь с хитрым дворфом-торговцем, который продает опасные артефакты.',
             },
             firstButtonText: {
-                en: 'You definetely need one. That lengendary Tregmaul Sword will help to complete your mission.',
-                ru: 'Вам определенно нужен такой артефакт. Этот легендарный Трегмольский Меч поможет вам выполнить свое задание.'
+                en: 'You definetely need one. That lengendary Tregmaul Helmet will help to complete your mission.',
+                ru: 'Вам определенно нужен такой артефакт. Этот легендарный Трегмольский Шлем поможет вам выполнить свое задание.'
             },
             secondButtonText: {
                 en: 'You think that a couple of beers in a tavern will help you more than all these so-called "artifacts"',
@@ -198,22 +196,22 @@ export const cityQuests = [
             firstResult: {
                 text:{
                     mainPageText: {
-                        en: 'You bought this artifact. Maybe it\'s not sharp as the merchant says, but it will definetely help you.',
-                        ru: 'Вы покупаете этот артефакт. Возможно он не такой острый как говорил торговец, но он определенно поможет вам.'
+                        en: 'You bought this artifact. Maybe it\'s not perfect as the merchant says, but it will definetely help you.',
+                        ru: 'Вы покупаете этот артефакт. Возможно он не такой идеальный как говорил торговец, но он определенно поможет вам.'
                     },
                 },
                 hero:{
                     xp: 500,
                     gold: 0,
                     artifact: {
-                        img:tregmaulSword,
+                        img: tregmaulHelmet,
                         name: {
-                            en: 'Tregmaul Sword',
-                            ru: 'Трегмольский Меч'
+                            en: 'Tregmaul Helmet',
+                            ru: 'Трегмольский Шлем'
                         },
                         description: {
-                            en: 'Dangerous Sword blablabla',
-                            ru: 'Опаснейший меч блаблабла'
+                            en: 'Tregmols are one of the peoples inhabiting the northern mountains, famous for their armor and fury. This helmet reliably protects its owner\'s head.',
+                            ru: 'Трегмолы - один из народов населяющих северные горы, известны своей броней и яростью. Этот шлем надежно защищает голову своего владельца.'
                         }
                     }
                 } 
@@ -497,7 +495,7 @@ export const cityQuests = [
                         text:{
                             mainPageText: {
                                 en: 'You sneak into the house, take the ring and take every expensive thing and even more, you find legendary artifact - Abyss Dagger, dagger made of abyssal obsidian by dark elves. After that you successfully escape, you give the ring to the nobleman and sell the rest to the pawnshop. You keep the dagger for yourself, it will definitely come in handy in the future.',
-                                ru: 'Вы проникаете в дом, крадете кольцо, а так же каждую дорогую вещь и даже больше, вы находите легендарный артефакт - Кинжал Бездны, созданный из обсидиана темными эльфами. После этого вы бесшумно покидаете его дом. Вы отдаете кольцо дворянину, а остальное сдаете в ломбард. Кинжал вы оставляете себе, в будущем он определенно пригодится вам.'
+                                ru: 'Вы проникаете в дом, крадете кольцо, а так же каждую дорогую вещь и даже больше, Вы находите легендарный артефакт - Кинжал Бездны, созданный из обсидиана темными эльфами. После этого Вы бесшумно покидаете его дом. Вы отдаете кольцо дворянину, а остальное сдаете в ломбард. Кинжал Вы оставляете себе, в будущем он определенно пригодится.'
                             },
                         },
                         hero:{
@@ -510,8 +508,8 @@ export const cityQuests = [
                                     ru: 'Кинжал Бездны'
                                 },
                                 description: {
-                                    en: 'Dangerous Dagger blablabla',
-                                    ru: 'Опаснейший кинжал блаблабла'
+                                    en: 'Dangerous dagger, grants its owner the agility of the dark elves. Forged from obsidian that prevents the blade from dulling.',
+                                    ru: 'Опасный кинжал, дарует своему владельцу ловкость темных эльфов. Выкован из обсидиана, который предотвращает затупление лезвия.'
                                 }
                             }
                         }
@@ -522,7 +520,7 @@ export const cityQuests = [
                         text:{
                             mainPageText: {
                                 en: 'You begin your investigation. After you find out everything you can in a local tavern, you sneak into the house, and find the ring, it`s a relic, lengendary Elven ring of Wisdom, made by eastern High Elves. You successfully escape from the house and decide to keep this ring for yourself, later you will return it to your elven brothers.',
-                                ru: 'Вы начинаете свое расследование. Разузнав все что можно в местной таверне вы проникаете в дом и находите кольцо - это реликвия, легендарное Кольцо эльфийской мудрости, созданное восточными Высшими Эльфами. Вы успешно покидаете дом и решаете пока оставить кольцо у себя, позже вы отдадите его своим эльфийским братьям.'
+                                ru: 'Вы начинаете свое расследование. Разузнав все что можно в местной таверне Вы проникаете в дом и находите кольцо - это реликвия, легендарное Кольцо эльфийской мудрости, созданное восточными Высшими Эльфами. Вы успешно покидаете дом и решаете пока оставить кольцо у себя, позже Вы отдадите его своим эльфийским братьям.'
                             },
                         },
                         hero:{
@@ -535,8 +533,8 @@ export const cityQuests = [
                                     ru: 'Кольцо Мудрости'
                                 },
                                 description: {
-                                    en: 'Dangerous ring blablabla',
-                                    ru: 'Опаснейший кольцо блаблабла'
+                                    en: 'It was made in those ancient times, when the kingdom of the elves was at the peak of its power. The Ring of Wisdom bestows elven discernment on the wearer.',
+                                    ru: 'Оно было создано в те давние времена, когда царство эльфов было на пике своего могущетсва. Кольцо Мудрости наделяет владельца эльфийской проницательностью.'
                                 }
                             }
                         }
@@ -547,7 +545,7 @@ export const cityQuests = [
                 text:{
                     deathText: {
                         en: 'Apparently someone hired killers, who stabbed you like a pig in the alley!',
-                        ru: 'Видимо кто-то нанял убийц, которые зарезали вас в подворотне как свинью!'
+                        ru: 'Видимо кто-то нанял убийц, которые зарезали Вас в подворотне как свинью!'
                     }
                 }
             }
@@ -689,8 +687,8 @@ export const cityQuests = [
                                     ru: 'Молот Суредина'
                                 },
                                 description: {
-                                    en: 'Dangerous Hammer blablabla',
-                                    ru: 'Опаснейший молот блаблабла'
+                                    en: 'This is a very powerful hammer, forged over a thousand years ago by dwarves of Grims-Ogr-Keraque. Grants its owner unprecedented strength.',
+                                    ru: 'Это очень могущественный молот, выкованный более тысячи лет назад дворфами из Гримс-Огр-Керака. Дарует своему владельцу небывалую силу.'
                                 }
                             }
                         }

@@ -2,17 +2,18 @@ const TOGGLE_TRANSITION = 'TOGGLE_TRANSITION';
 const HIDE_BACKGROUND = 'HIDE_BACKGROUND';
 const SHOW_BACKGROUND = 'SHOW_BACKGROUND';
 
-export const animateTransition = state => state.animations.animateTransition;
+const animateTransition = state => state.animations.animateTransition;
+const hideBackgroundSelector = state => state.animations.hideBackground;
 
-export const ACTION_TOGGLE_TRANSITION = {
+const ACTION_TOGGLE_TRANSITION = {
     type: TOGGLE_TRANSITION
 };
 
-export const ACTION_HIDE_BACKGROUND = {
+const ACTION_HIDE_BACKGROUND = {
     type: HIDE_BACKGROUND
 };
 
-export const ACTION_SHOW_BACKGROUND = {
+const ACTION_SHOW_BACKGROUND = {
     type: SHOW_BACKGROUND
 };
 
@@ -32,4 +33,12 @@ export const mainPageTransitionReducer = (state = initialTransitionState, action
         default:
             return { ...state };
     };
+};
+
+export { 
+    animateTransition, 
+    hideBackgroundSelector, 
+    ACTION_TOGGLE_TRANSITION, 
+    ACTION_HIDE_BACKGROUND,
+    ACTION_SHOW_BACKGROUND
 };

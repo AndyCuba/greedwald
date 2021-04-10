@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import mainBackground from '../../images/mainBackground.jpg';
 import blackBackground from '../../images/blackBackground.jpg';
 import { infoSelector } from '../../ducks/info';
+import { hideBackgroundSelector } from '../../ducks/animations';
 
 const Style = createGlobalStyle`
         * {
@@ -17,7 +18,7 @@ const Style = createGlobalStyle`
             background: ${props => 
                 props.hideBackground ? 
                     `url(${blackBackground}) no-repeat top/cover` :
-                    `url(${props.background ? props.background : mainBackground}) no-repeat top/cover`};
+                    `url(${props.background ? props.background : mainBackground}) top/cover`};
             transition: ${props => 
                 props.hideBackground || props.background ? 'background-image 2s ease-in-out' :
                     'none'};
@@ -28,7 +29,7 @@ const Style = createGlobalStyle`
 
 function GlobalStyle() {
     const background = useSelector(state => state.book.background);
-    const hideBackground = useSelector(state => state.animations.hideBackground);
+    const hideBackground = useSelector(hideBackgroundSelector);
     const isInfoOpened = useSelector(infoSelector);
 
     return(
