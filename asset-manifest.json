@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/greedwald/static/js/main.fb12b2ca.chunk.js",
-    "main.js.map": "/greedwald/static/js/main.fb12b2ca.chunk.js.map",
+    "main.js": "/greedwald/static/js/main.3862a89d.chunk.js",
+    "main.js.map": "/greedwald/static/js/main.3862a89d.chunk.js.map",
     "runtime-main.js": "/greedwald/static/js/runtime-main.63e4c6e9.js",
     "runtime-main.js.map": "/greedwald/static/js/runtime-main.63e4c6e9.js.map",
-    "static/js/2.fea7ece6.chunk.js": "/greedwald/static/js/2.fea7ece6.chunk.js",
-    "static/js/2.fea7ece6.chunk.js.map": "/greedwald/static/js/2.fea7ece6.chunk.js.map",
+    "static/js/2.27ef29f6.chunk.js": "/greedwald/static/js/2.27ef29f6.chunk.js",
+    "static/js/2.27ef29f6.chunk.js.map": "/greedwald/static/js/2.27ef29f6.chunk.js.map",
     "index.html": "/greedwald/index.html",
-    "static/js/2.fea7ece6.chunk.js.LICENSE.txt": "/greedwald/static/js/2.fea7ece6.chunk.js.LICENSE.txt",
+    "static/js/2.27ef29f6.chunk.js.LICENSE.txt": "/greedwald/static/js/2.27ef29f6.chunk.js.LICENSE.txt",
     "static/media/abyssDagger.svg": "/greedwald/static/media/abyssDagger.c056704d.svg",
     "static/media/ambient.de5ec0d7.mp3": "/greedwald/static/media/ambient.de5ec0d7.mp3",
     "static/media/bagIcon.svg": "/greedwald/static/media/bagIcon.6ef974c0.svg",
@@ -31,19 +31,21 @@
     "static/media/infoIcon.svg": "/greedwald/static/media/infoIcon.72a6a61f.svg",
     "static/media/inventoryScroll.png": "/greedwald/static/media/inventoryScroll.b69d0f50.png",
     "static/media/mainBackground.jpg": "/greedwald/static/media/mainBackground.59c4dff4.jpg",
+    "static/media/mountains1i.jpg": "/greedwald/static/media/mountains1i.e9a574b9.jpg",
+    "static/media/mountainsBG1.jpg": "/greedwald/static/media/mountainsBG1.f2a93517.jpg",
     "static/media/pageBackground.jpg": "/greedwald/static/media/pageBackground.83ba862e.jpg",
     "static/media/raceCardsBackground.png": "/greedwald/static/media/raceCardsBackground.37bf7f0d.png",
     "static/media/ringOfWisdom.svg": "/greedwald/static/media/ringOfWisdom.2d669a17.svg",
     "static/media/scrollHeader.jpg": "/greedwald/static/media/scrollHeader.47b71e76.jpg",
     "static/media/suredinHammer.svg": "/greedwald/static/media/suredinHammer.1f06b513.svg",
-    "static/media/tregmaulSword.svg": "/greedwald/static/media/tregmaulSword.9ee7691c.svg",
+    "static/media/tregmaulHelmet.svg": "/greedwald/static/media/tregmaulHelmet.105e6dca.svg",
     "static/media/unmute.png": "/greedwald/static/media/unmute.1ff037d5.png",
     "static/media/woods2i.jpg": "/greedwald/static/media/woods2i.acb3e43c.jpg",
     "static/media/woods3i.jpg": "/greedwald/static/media/woods3i.724decc8.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.63e4c6e9.js",
-    "static/js/2.fea7ece6.chunk.js",
-    "static/js/main.fb12b2ca.chunk.js"
+    "static/js/2.27ef29f6.chunk.js",
+    "static/js/main.3862a89d.chunk.js"
   ]
 }
