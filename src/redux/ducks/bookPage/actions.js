@@ -1,7 +1,7 @@
-import { bookText } from '../../bookTexts/bookText';
-import { cityQuests } from '../../bookTexts/cityQuests';
-import { mountainQuests } from '../../bookTexts/mountainsQuests';
-import { woodsQuests } from '../../bookTexts/woodsQuests';
+import { bookText } from '../../../bookTexts/bookText';
+import { cityQuests } from '../../../bookTexts/cityQuests';
+import { mountainQuests } from '../../../bookTexts/mountainsQuests';
+import { woodsQuests } from '../../../bookTexts/woodsQuests';
 
 const PICK_HERO = 'PICK_HERO',
         TURN_BOOKPAGE = 'TURN_BOOKPAGE',

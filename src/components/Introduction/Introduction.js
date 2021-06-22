@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import Info from '../Info/Info';
 import StartButton from '../StartButton/StartButton';
 import Modal from '../CreditsModal/CreditsModal';
-import { ACTION_TOGGLE_MODAL } from '../../ducks/creditsModal';
-import { languageSelector } from '../../ducks/language';
-import { ACTION_SHOW_BACKGROUND } from '../../ducks/animations';
+import { ACTION_TOGGLE_MODAL } from '../../redux/ducks/creditsModal';
+import { languageSelector } from '../../redux/ducks/language';
+import { ACTION_SHOW_BACKGROUND } from '../../redux/ducks/animations';
 import { 
   IntroWrapper, 
   Heading, 

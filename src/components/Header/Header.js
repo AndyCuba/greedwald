@@ -4,9 +4,9 @@ import {
     goldSelector, 
     heroNameSelector, 
     xpSelector 
-} from '../../ducks/bookPage/selectors';
-import { ACTION_TOGGLE_INVENTORY } from '../../ducks/inventory';
-import { languageSelector } from '../../ducks/language';
+} from '../../redux/ducks/bookPage/selectors';
+import { ACTION_TOGGLE_INVENTORY } from '../../redux/ducks/inventory';
+import { languageSelector } from '../../redux/ducks/language';
 import { 
     StyledHeader, 
     HumanPortrait, 

@@ -11,7 +11,7 @@ import LanguageButton from './components/LanguageButton/LanguageButton';
 import GlobalStyle from './components/GlobalStyle/GlobalStyle';
 import HeroPick from './components/HeroPick/HeroPick';
 import Preloader from './components/Preloader/Preloader';
-import { loadIntroductionSelector } from './ducks/fetching';
+import { loadIntroductionSelector } from './redux/ducks/fetching';
 
 
 const SpecialModalBackground = styled(BaseModalBackground)`

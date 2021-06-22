@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { ACTION_TOGGLE_TRANSITION } from '../../ducks/animations';
-import { ACTION_RESET_BOOK_STATE } from '../../ducks/bookPage/actions';
-import { goldSelector, xpSelector } from '../../ducks/bookPage/selectors';
-import { languageSelector } from '../../ducks/language';
-import { ACTION_RESET_START_BUTTON } from '../../ducks/startButton';
+import { ACTION_TOGGLE_TRANSITION } from '../../redux/ducks/animations';
+import { ACTION_RESET_BOOK_STATE } from '../../redux/ducks/bookPage/actions';
+import { goldSelector, xpSelector } from '../../redux/ducks/bookPage/selectors';
+import { languageSelector } from '../../redux/ducks/language';
+import { ACTION_RESET_START_BUTTON } from '../../redux/ducks/startButton';
 import { StyledDiv } from './style';
 
 

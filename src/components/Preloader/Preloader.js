@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { ACTION_LOAD_INTRODUCTION } from '../../ducks/fetching';
+import { ACTION_LOAD_INTRODUCTION } from '../../redux/ducks/fetching';
 import { CircleMask, Heading, MainSVG, Tree } from './style';
 
 const importAll = r => r.keys().map(r).map(item => item.default);

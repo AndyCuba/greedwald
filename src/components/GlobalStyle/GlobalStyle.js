@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 
 import mainBackground from '../../images/mainBackground.jpg';
 import blackBackground from '../../images/blackBackground.jpg';
-import { infoSelector } from '../../ducks/info';
-import { hideBackgroundSelector } from '../../ducks/animations';
+import { infoSelector } from '../../redux/ducks/info';
+import { hideBackgroundSelector } from '../../redux/ducks/animations';
 
 const Style = createGlobalStyle`
         * {

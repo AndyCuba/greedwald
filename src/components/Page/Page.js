@@ -19,12 +19,12 @@ import {
   raceButtonNameSelector,
   imageSelector,
   artifactsSelector
-} from '../../ducks/bookPage/selectors';
-import { ACTION_TURN_BOOKPAGE } from '../../ducks/bookPage/actions';
+} from '../../redux/ducks/bookPage/selectors';
+import { ACTION_TURN_BOOKPAGE } from '../../redux/ducks/bookPage/actions';
 import {
   ACTION_TOGGLE_TRANSITION,
   animateTransition,
-} from '../../ducks/animations';
+} from '../../redux/ducks/animations';
 import { 
   PageWrapper,
   ButtonWrapper, 
@@ -34,9 +34,9 @@ import {
 } from './style';
 import Header from '../Header/Header';
 import Death from '../Death/Death';
-import { languageSelector } from '../../ducks/language';
+import { languageSelector } from '../../redux/ducks/language';
 import HeroPick from '../HeroPick/HeroPick';
-import { ACTION_CHANGE_START_BUTTON } from '../../ducks/startButton';
+import { ACTION_CHANGE_START_BUTTON } from '../../redux/ducks/startButton';
 import Inventory from '../Inventory/Inventory';
 
 const Page = (props) => {
@@ -142,7 +142,7 @@ const Page = (props) => {
             </button>
           ) : null}
           <button onClick={returnToHome}>
-            {english ? "To Home" : "Вернуться в Меню"}
+            {english ? "Menu" : "Меню"}
           </button>
         </ButtonWrapper>
       </BookWrapper>

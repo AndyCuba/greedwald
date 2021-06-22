@@ -3,8 +3,8 @@ export const bookText = [
         id: 1,
         text:{
             mainPageText: {
-                en: 'Now you have to choose which area you will explore.',
-                ru: 'Сейчас вам необходимо выбрать какую область исследовать.'
+                en: 'Now you have to choose which area you will explore. It seems safest to explore the city and then the forest. The mountains seem to you the most dangerous.',
+                ru: 'Сейчас вам необходимо выбрать какую область исследовать. Кажется, что безопасней всего исследовать город, а после него лес. Горы вам кажутся самыми опасными.'
             },
             firstButtonText: {
                 en: 'Explore Greedwald city.',

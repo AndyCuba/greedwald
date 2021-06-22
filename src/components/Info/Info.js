@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { ACTION_TOGGLE_INFO, infoSelector } from '../../ducks/info';
-import { languageSelector } from '../../ducks/language';
+import { ACTION_TOGGLE_INFO, infoSelector } from '../../redux/ducks/info';
+import { languageSelector } from '../../redux/ducks/language';
 import { InfoIcon, InfoPage } from './style';
 
 

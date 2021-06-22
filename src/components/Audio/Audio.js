@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import audio from './ambient.mp3';
 import unmute from '../../images/unmute.png';
 import mute from '../../images/mute.png';
-import { ACTION_TOGGLE_MUTE_MUSIC } from '../../ducks/music';
+import { ACTION_TOGGLE_MUTE_MUSIC } from '../../redux/ducks/music';
 
 const StyledAnch = styled.a`
   position: absolute;

@@ -242,8 +242,8 @@ export const woodsQuests = [
                                 ru: 'Чешуйчатая броня Эредена'
                             },
                             description: {
-                                en: 'Dangerous armor blablabla',
-                                ru: 'Опаснейшая броня блаблабла'
+                                en: 'Magnificent armor forged during the era of the inhabitants of Eredhen, during the existence of the early elves.',
+                                ru: 'Великолепная броня, выкованная в эпоху жителей Эредeна, во времена существования ранних эльфов.'
                             }
                         }
                     }

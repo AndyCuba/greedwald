@@ -15,9 +15,9 @@ import {
     elfHeading,
     elfDescription
 } from '../../bookTexts/heroPickText';
-import { languageSelector } from '../../ducks/language';
-import { ACTION_PICK_HERO } from '../../ducks/bookPage/actions';
-import { animateTransition } from '../../ducks/animations';
+import { languageSelector } from '../../redux/ducks/language';
+import { ACTION_PICK_HERO } from '../../redux/ducks/bookPage/actions';
+import { animateTransition } from '../../redux/ducks/animations';
 
 
 function HeroPick() {

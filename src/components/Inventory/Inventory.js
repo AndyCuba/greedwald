@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 
-import { artifactsSelector } from '../../ducks/bookPage/selectors';
-import { inventorySelector } from '../../ducks/inventory';
-import { languageSelector } from '../../ducks/language';
+import { artifactsSelector } from '../../redux/ducks/bookPage/selectors';
+import { inventorySelector } from '../../redux/ducks/inventory';
+import { languageSelector } from '../../redux/ducks/language';
 import { ArtifactImage, StyledDiv, StyledItem } from './style';
 
 

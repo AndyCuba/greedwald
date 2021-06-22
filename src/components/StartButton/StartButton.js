@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { ACTION_SHOW_BACKGROUND, ACTION_HIDE_BACKGROUND } from '../../ducks/animations';
+import { ACTION_SHOW_BACKGROUND, ACTION_HIDE_BACKGROUND } from '../../redux/ducks/animations';
 
 
-import { languageSelector } from '../../ducks/language';
-import { ACTION_ON_MUSIC } from '../../ducks/music';
-import { ACTION_CHANGE_START_BUTTON, startButtonTextSelector } from '../../ducks/startButton';
+import { languageSelector } from '../../redux/ducks/language';
+import { ACTION_ON_MUSIC } from '../../redux/ducks/music';
+import { ACTION_CHANGE_START_BUTTON, startButtonTextSelector } from '../../redux/ducks/startButton';
 import { 
     ButtonContainer, 
     StyledLink, 

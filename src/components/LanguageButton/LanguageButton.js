@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import { ACTION_CHANGE_LANGUAGE, languageSelector } from '../../ducks/language';
+import { ACTION_CHANGE_LANGUAGE, languageSelector } from '../../redux/ducks/language';
 
 const StyledDiv = styled.div`
     position: absolute;

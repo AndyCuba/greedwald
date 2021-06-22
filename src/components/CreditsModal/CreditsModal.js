@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { ACTION_TOGGLE_MODAL } from '../../ducks/creditsModal';
+import { ACTION_TOGGLE_MODAL } from '../../redux/ducks/creditsModal';
 import { StyledModal } from './styles';
-import { languageSelector } from '../../ducks/language';
+import { languageSelector } from '../../redux/ducks/language';
 
 
 function CreditsModal() {
